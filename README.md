@@ -20,7 +20,7 @@ O site está apontando para **`wwlvdev` / `hydra-animes`**:
 Se o usuário ou o nome do repositório mudar, substitua `wwlvdev` e/ou
 `hydra-animes` em:
 
-- `index.html` e `en.html` — `canonical`, `hreflang`, Open Graph, Twitter, JSON-LD e os botões de download
+- `index.html`, `en.html` e `es.html` — `canonical`, `hreflang`, Open Graph, Twitter, JSON-LD e os botões de download
 - `robots.txt` — linha `Sitemap`
 - `sitemap.xml` — `<loc>` e alternates
 
@@ -39,17 +39,19 @@ editar o HTML a cada versão.
 
 ## Atualizar a versão na página
 
-Ao subir uma versão nova, ajuste o texto em três lugares:
+Ao subir uma versão nova, ajuste o texto em quatro lugares:
 
 1. `index.html` — eyebrow do hero, `.version` do bloco final e `"softwareVersion"` no JSON-LD
 2. `en.html` — mesmos três pontos
-3. `sitemap.xml` — `lastmod` das duas URLs
+3. `es.html` — mesmos três pontos
+4. `sitemap.xml` — `lastmod` das três URLs
 
 ## Estrutura
 
 ```
 index.html          página principal (pt-BR)
 en.html             versão em inglês
+es.html             versión en español latino (es-419)
 robots.txt
 sitemap.xml
 .nojekyll           impede o Jekyll de processar os arquivos
@@ -66,10 +68,12 @@ visual é a mesma do APK.
 ## Checklist de SEO já aplicado
 
 - `title` e `description` únicos por idioma, `canonical` próprio
-- `hreflang` recíproco (pt-BR, en, x-default)
-- Open Graph + Twitter Card com capa 1200×630
+- `hreflang` recíproco (pt-BR, en, es-419, x-default) nas três páginas
+- seletor de idioma no header (PT · EN · ES) e no rodapé
+- Open Graph + Twitter Card com capa 1200×630 e `og:locale` por idioma
 - JSON-LD `SoftwareApplication` + `Organization` + `WebSite`
-- `robots.txt` e `sitemap.xml` com alternates
+- `robots.txt` e `sitemap.xml` com alternates das três versões
 - imagens com `width`/`height`, `alt` descritivo e fonte pré-carregada
+- `rel="noopener noreferrer"` nos links externos e `meta referrer`
 
 Nada de `aggregateRating` inventado — nota falsa em schema é penalizada.

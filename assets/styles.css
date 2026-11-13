@@ -115,6 +115,19 @@ a:hover { text-decoration: underline; }
 .nav a { color: var(--mint); }
 .nav a:hover { color: var(--white); text-decoration: none; }
 
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.lang a, .lang .cur { padding: 4px 0; }
+.lang a { color: var(--muted); }
+.lang a:hover { color: var(--white); text-decoration: none; }
+.lang .cur { color: var(--green); }
+
 /* ---------- botões ---------- */
 
 .btn {
@@ -558,12 +571,16 @@ footer {
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 42px; }
   .cards, .devices, .steps { grid-template-columns: repeat(2, 1fr); }
-  .nav { display: none; }
-  .topbar .btn { margin-left: auto; }
+  .nav { margin-left: auto; gap: 16px; }
+  .nav > a { display: none; }
+  .topbar .btn { margin-left: 14px; }
 }
 
 @media (max-width: 620px) {
   body { font-size: 16px; }
+  .topbar .wrap { gap: 12px; }
+  .brand { font-size: 17px; }
+  .topbar .btn { margin-left: 4px; }
   .hero { padding: 54px 0 64px; }
   section { padding: 62px 0; }
   .cards, .devices, .steps { grid-template-columns: 1fr; }
