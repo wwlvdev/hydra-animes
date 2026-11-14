@@ -65,6 +65,15 @@ As imagens vieram do próprio app (`res/drawable/logo.png`,
 `res/drawable/splashtv.jpg`, `ic_launcher-playstore.png`), então a identidade
 visual é a mesma do APK.
 
+## Verificação do Search Console
+
+O arquivo `googlea3938b8da6a8605f.html` na raiz é o que prova a propriedade
+do site para o Google. **Não apague**: sem ele, a verificação cai e o
+Search Console perde o acesso à propriedade.
+
+Sitemap para enviar no Search Console:
+`https://wwlvdev.github.io/hydra-animes/sitemap.xml`
+
 ## Checklist de SEO já aplicado
 
 - `title` e `description` únicos por idioma, `canonical` próprio
